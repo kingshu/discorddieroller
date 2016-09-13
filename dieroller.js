@@ -17,7 +17,7 @@ bot.on("message", msg => {
             msg.channel.sendMessage("That die has an impossibly huge number of faces, "+msg.author+". Maybe roll a smaller die?");
         }
         else {
-            var result = "Result: ";
+            var result = "Roll: ";
             var total = 0;
             for (var i=1; i<=parseInt(dieCount); i++) {
                 var rollResult = getRandomInt(parseInt(dieFaces));
@@ -38,7 +38,7 @@ bot.on("message", msg => {
                 }
             }
 
-            result += "  =  **"+total+"**";
+            result += "\nResult :  **"+total+"**";
 
             msg.channel.sendMessage(result);
         }
